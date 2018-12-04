@@ -17,7 +17,7 @@ function getPackageInfo(packageFile) {
 
 function getDefaultOuputFilename({ cwd }) {
     const packageFile = path.join(cwd, 'package.json');
-    return getPackageInfo(packageFile).then(packageInfo => `${sanitize(packageInfo.name)}.zip`);
+    return getPackageInfo(packageFile).then(packageInfo => `${sanitize(packageInfo.name)}-${packageInfo.version}.zip`);
 };
 
 function zipFiles(files, filename, source, destination, info, verbose) {
