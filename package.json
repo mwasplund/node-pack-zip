@@ -6,7 +6,8 @@
     "url": "https://github.com/mwasplund/npm-pack-zip.git"
   },
   "scripts": {
-    "test": "node bin/npm-pack-zip.js"
+    "test": "node bin/npm-pack-zip.js",
+    "testDst": "node bin/npm-pack-zip.js --dst=dist"
   },
   "dependencies": {
     "archiver-promise": "^1.0.0",

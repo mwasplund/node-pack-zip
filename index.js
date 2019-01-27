@@ -41,6 +41,9 @@ function pack({ source, destination, info, verbose }) {
         .then(files => {
             return getDefaultOuputFilename({ cwd: source })
                 .then(filename => {
+                    if (destination && !fs.existsSync(destination)){
+                        fs.mkdirSync(destination);
+                    }
                     return zipFiles(files, filename, source, destination, info, verbose);
                 });
         });
